@@ -24,7 +24,7 @@ public class Trie {
             if (cur.childs.containsKey(w)) {
                 cur = cur.childs.get(w);
             } else {
-                cur.childs.put(w, new TrieNode(cur,w));
+                cur.childs.put(w, new TrieNode(cur, w));
                 cur = cur.childs.get(w);
             }
         }
