@@ -26,19 +26,18 @@ public class TreeNode {
         int length = temp.length;
         if (2 * index + 1 < length) {
             int leftIndex = 2 * index + 1;
-            if (temp[leftIndex] == Integer.MIN_VALUE) {
-                return;
+            if (temp[leftIndex] != Integer.MIN_VALUE) {
+                root.left = new TreeNode(temp[leftIndex]);
+                help(temp, leftIndex, root.left);
             }
-            root.left = new TreeNode(temp[leftIndex]);
-            help(temp, leftIndex, root.left);
+
         }
         if (2 * index + 2 < length) {
             int rightIndex = 2 * index + 2;
-            if (temp[rightIndex] == Integer.MIN_VALUE) {
-                return;
+            if (temp[rightIndex] != Integer.MIN_VALUE) {
+                root.right = new TreeNode(temp[rightIndex]);
+                help(temp, rightIndex, root.right);
             }
-            root.right = new TreeNode(temp[rightIndex]);
-            help(temp, rightIndex, root.right);
         }
     }
 
@@ -46,7 +45,7 @@ public class TreeNode {
      * 中序遍历
      */
 
-    private  static void mid(TreeNode root) {
+    private static void mid(TreeNode root) {
         if (root == null) {
             return;
         }
@@ -56,7 +55,7 @@ public class TreeNode {
     }
 
     public static void main(String[] args) {
-        int[] a = {1, 2, Integer.MIN_VALUE, 4, 5, 6};
+        int[] a = {3, 1, 4, Integer.MIN_VALUE, 2};
         TreeNode root = TreeNode.getTreeNode(a);
         TreeNode.mid(root);
     }
