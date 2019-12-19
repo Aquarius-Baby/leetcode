@@ -12,6 +12,7 @@
 - [242 有效的字母异位词](src/code/leetcode242.java)
 - [295 数据流的中位数](src/code/leetcode295.java)
 - [344 反转字符串](src/code/leetcode344.java)
+- [347 前 K 个高频元素](src/code/leetcode347.java)
 - [378 有序矩阵中第K小的元素](src/code/leetcode378.java)
 - [387 字符串中的第一个唯一字符](src/code/leetcode387.java)
 - [680 回文字符串](src/code/leetcode680.java)
