@@ -39,7 +39,6 @@ public class leetcode354 {
         if (size == 0) {
             return 0;
         }
-
         Arrays.sort(envelopes,
                 (a, b) -> a[0] == b[0] ? b[1] - a[1] : a[0] - b[0]);
         int[] dp = new int[size];
