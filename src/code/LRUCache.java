@@ -6,8 +6,9 @@ import java.util.Map;
 /**
  * 146. LRU缓存机制
  */
-class LRUCache extends LinkedHashMap<Integer,Integer> {
+class LRUCache extends LinkedHashMap<Integer, Integer> {
     private int capacity;
+
     public LRUCache(int capacity) {
         super(capacity, 0.75F, true);
         this.capacity = capacity;

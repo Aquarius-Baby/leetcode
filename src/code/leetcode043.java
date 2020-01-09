@@ -107,7 +107,7 @@ public class leetcode043 {
 
         StringBuilder res = new StringBuilder();
         int i = results.length - 1;
-        while(results[i] == 0){
+        while (results[i] == 0) {
             i--;
         }
         for (; i >= 0; i--) {

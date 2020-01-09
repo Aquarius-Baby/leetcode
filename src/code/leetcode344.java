@@ -5,9 +5,9 @@ package code;
  */
 public class leetcode344 {
     public void reverseString(char[] s) {
-        int i = 0 ;
-        int j = s.length-1;
-        while(i<j){
+        int i = 0;
+        int j = s.length - 1;
+        while (i < j) {
             char t = s[i];
             s[i] = s[j];
             s[j] = t;

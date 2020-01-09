@@ -3,7 +3,7 @@ package code;
 public class t {
     public static void main(String[] args) {
 
-        int [] nums = {7,1,5,3,6,4};
+        int[] nums = {7, 1, 5, 3, 6, 4};
         System.out.println(test2(nums));
     }
 
@@ -30,12 +30,12 @@ public class t {
         }
         int res = 0;
         int minPrice = prices[0];
-         for (int price : prices) {
+        for (int price : prices) {
             if (minPrice < price) {
                 res = res + price - minPrice;
                 minPrice = price;
-             }
-             minPrice = Math.min(minPrice, price);
+            }
+            minPrice = Math.min(minPrice, price);
         }
         return res;
     }

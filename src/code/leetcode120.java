@@ -19,6 +19,7 @@ public class leetcode120 {
 
     /**
      * 自顶向下的遍历
+     *
      * @param triangle
      * @return
      */
@@ -52,6 +53,7 @@ public class leetcode120 {
 
     /**
      * 自底向上的遍历
+     *
      * @param triangle
      * @return
      */

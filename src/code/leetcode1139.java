@@ -55,7 +55,7 @@ public class leetcode1139 {
                     if (dp[i][j][0] >= length && dp[i][j][1] >= length
                             && dp[i - length + 1][j][0] >= length
                             && dp[i][j - length + 1][1] >= length) {
-                        return length*length;
+                        return length * length;
                     }
                 }
             }

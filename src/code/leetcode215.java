@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 
 /**
  * 215 数组中的第K个最大元素
- *
+ * <p>
  * tip 堆
  *
  * <p>
@@ -23,7 +23,7 @@ public class leetcode215 {
     public int findKthLargest(int[] nums, int k) {
         //重点啊！！！最小堆
         PriorityQueue<Integer> heap = new PriorityQueue<Integer>((n1, n2) -> n1 - n2);
-         for (int n : nums) {
+        for (int n : nums) {
             heap.add(n);
             if (heap.size() > k)
                 heap.poll();

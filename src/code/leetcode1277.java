@@ -2,12 +2,12 @@ package code;
 
 /**
  * 1277 统计全为 1 的正方形子矩阵
- *
+ * <p>
  * 给你一个 m * n 的矩阵，矩阵中的元素不是 0 就是 1，请你统计并返回其中完全由 1 组成的 正方形 子矩阵的个数。
- *
+ * <p>
  *  
  * 示例 1：
- *
+ * <p>
  * 输入：matrix =
  * [
  *   [0,1,1,1],
@@ -20,7 +20,6 @@ package code;
  * 边长为 2 的正方形有 4 个。
  * 边长为 3 的正方形有 1 个。
  * 正方形的总数 = 10 + 4 + 1 = 15.
- *
  */
 public class leetcode1277 {
     public int countSquares(int[][] matrix) {
@@ -43,7 +42,7 @@ public class leetcode1277 {
                         min = Math.min(min, dp[i - 1][j - 1]);
                         dp[i][j] = min + 1;
                     }
-                    sum = sum + dp[i][j] ;
+                    sum = sum + dp[i][j];
                 }
             }
         }

@@ -36,7 +36,7 @@ public class leetcode421 {
         int res = 0;
         int mask = 0;
         for (int i = 31; i >= 0; i--) {
-             // 注意点1：利用 mask 保留前缀，取出每一个x的前n-i位
+            // 注意点1：利用 mask 保留前缀，取出每一个x的前n-i位
             mask = mask | (1 << i);
             System.out.println(Integer.toBinaryString(mask));
             Set<Integer> set = new HashSet<>();
