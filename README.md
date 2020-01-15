@@ -6,6 +6,7 @@
 - [045 跳跃游戏 II](src/code/leetcode045.java)
 - [056 合并区间](src/code/leetcode056.java)
 - [060 第k个排列](src/code/leetcode060.java)
+- [069 x 的平方根](src/code/leetcode069.java)
 - [071 简化路径](src/code/leetcode071.java)
 - [093 复原IP地址](src/code/leetcode093.java)
 - [097 字符串交错](src/code/leetcode097.java)
@@ -13,6 +14,7 @@
 - [112 路径总和](src/code/leetcode112.java)
 - [120 三角形最小路径和](src/code/leetcode120.java)
 - [131 分割回文字符串](src/code/leetcode131.java)
+- [134 加油站](src/code/leetcode134.java)
 - [139 单词拆分](src/code/leetcode139.java)
 - [140 单词拆分2](src/code/leetcode140.java)
 - [146 LRU缓存机制](src/code/LRUCache.java)
@@ -20,9 +22,9 @@
 - [151 翻转字符串里的单词](src/code/leetcode151.java)
 - [199 二叉树的右视图](src/code/leetcode199.java)
 - [208 实现 Trie (前缀树)](src/code/leetcode208.java)
-- [211 最大正方形](src/code/leetcode211.java)
 - [212 单词搜索 II](src/code/leetcode212.java)
 - [215 数组中的第K个最大元素](src/code/leetcode215.java)
+- [221 最大正方形](src/code/leetcode221.java)
 - [230 二叉搜索树中第K小的元素](src/code/leetcode230.java)
 - [235 二叉树的最近公共祖先](src/code/leetcode235java)
 - [242 有效的字母异位词](src/code/leetcode242.java)
@@ -35,6 +37,7 @@
 - [378 有序矩阵中第K小的元素](src/code/leetcode378.java)
 - [387 字符串中的第一个唯一字符](src/code/leetcode387.java)
 - [421 数组中两个数的最大异或值](src/code/leetcode421.java)
+- [459 重复的子字符串](src/code/leetcode459.java)
 - [567 字符串的排列](src/code/leetcode567.java)
 - [646 最长数对链](src/code/leetcode646.java)
 - [673 最长递增子序列的个数](src/code/leetcode673.java)
@@ -46,7 +49,19 @@
 
 ### 链表
 - [001 两数之和](src/code/leetcode001.java)
-
+- [019 删除链表的倒数第N个节点]( )
+- [025 K 个一组翻转链表]( )
+- [092 反转链表 II from to]( )
+- [206 反转链表]( )
+-
+- [019 删除链表的倒数第N个节点]( )
+- [082 删除排序链表中的重复元素 只留下未重复]( )
+- [083 删除排序链表中的重复元素 使每个元素只出现一次]( )
+-
+- [141 环形链表 是否存在环]( )
+- [142 环形链表 入环点]( )
+- [ 环形链表 环长度]( )
+ 
 
 ### 树
 - [112 路径总和](src/code/leetcode112.java)
