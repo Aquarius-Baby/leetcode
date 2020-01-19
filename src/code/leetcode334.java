@@ -29,6 +29,13 @@ public class leetcode334 {
         System.out.println(increasingTriplet(nums));
     }
 
+    /**
+     * 解法1：记录nums[i]之前最小的数 one ，第二小的数 two，one < two。
+     *       判断nums[i]
+     *          (1) nums[i] > two ====》 return true
+     *          (2) nums[i] > one ====》 two = nums[i]
+     *          (3) nums[i] < one ====>  one= nums[i]
+     */
     public static boolean increasingTriplet(int[] nums) {
         int length = nums.length;
         if (length < 3) {
@@ -48,6 +55,13 @@ public class leetcode334 {
         }
         return false;
     }
+
+    /**
+     * 解法2：
+     * 利用上升子序列的解法，如果存在3个连续上升，即可返回true
+     * @param nums
+     * @return
+     */
 
     public static boolean increasingTriplet2(int[] nums) {
         int length = nums.length;
