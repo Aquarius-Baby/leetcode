@@ -13,6 +13,12 @@ import java.util.List;
  * https://leetcode-cn.com/problems/word-break/
  */
 public class leetcode139 {
+    /**
+     * 解法1：
+     * 思路：
+     *  dp[i]表示以第 i 个字符结尾的字符串，是否可以拆分为字典中的单词
+     *
+     */
     public boolean wordBreak(String s, List<String> wordDict) {
         // dp[i]表示i个字符组成的字符串，是否可以满足要求
         boolean[] dp = new boolean[s.length() + 1];
