@@ -1,39 +1,46 @@
 package sort;
 
+import java.util.Arrays;
+
 /**
  * 基数排序
  */
 public class RadixSort {
-    /**
-     *
-     * @param A 原数组
-     * @param temp 临时数组
-     * @param n 序列的数字个数
-     * @param k 最大的位数2
-     * @param r 基数10
-     * @param cnt 存储bin[i]的个数
-     */
-    public static void RadixSort(int A[], int temp[], int n, int k, int r, int cnt[]) {
-        for (int i = 0, rtok = 1; i < k; i++, rtok = rtok * r) {
-            //初始化
-            for (int j = 0; j < r; j++) {
-                cnt[j] = 0;
+    public static void main(String[] args) {
+        int[] nums = {73, 22, 93, 43, 55, 14, 28, 65, 39, 81, 33, 100};
+        new RadixSort().radixSort(nums, 3);
+        Arrays.toString(nums);
+    }
+
+    // d表示最大的数有多少位
+    public void radixSort(int[] number, int d) {
+        int k = 0;
+        int n = 1;
+        //控制键值排序依据在哪一位
+        int m = 1;
+        //数组的第一维表示可能的余数0-9
+        int[][] temp = new int[10][number.length];
+        //数组orderp[i]用来表示该位是i的数的个数
+        int[] order = new int[10];
+        while (m <= d) {
+            // 将nums中的数，按照控制键值进行排序
+            for (int i = 0; i < number.length; i++) {
+                int lsd = ((number[i] / n) % 10);
+                temp[lsd][order[lsd]] = number[i];
+                order[lsd]++;
             }
-            //计算每个箱子的数字个数
-            for (int j = 0; j < n; j++) {
-                cnt[(A[j] / rtok) % r]++;
+            // 按顺序放入nums中
+            for (int i = 0; i < 10; i++) {
+                if (order[i] != 0)
+                    for (int j = 0; j < order[i]; j++) {
+                        number[k] = temp[i][j];
+                        k++;
+                    }
+                order[i] = 0;
             }
-            //cnt[j]的个数修改为前j个箱子一共有几个数字
-            for (int j = 1; j < r; j++) {
-                cnt[j] = cnt[j - 1] + cnt[j];
-            }
-            for (int j = n - 1; j >= 0; j--) {      //重点理解
-                cnt[(A[j] / rtok) % r]--;
-                temp[cnt[(A[j] / rtok) % r]] = A[j];
-            }
-            for (int j = 0; j < n; j++) {
-                A[j] = temp[j];
-            }
+            n *= 10;
+            k = 0;
+            m++;
         }
     }
 }
