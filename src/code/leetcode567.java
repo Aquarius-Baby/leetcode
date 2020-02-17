@@ -24,9 +24,10 @@ import java.util.HashMap;
 public class leetcode567 {
 
     public static void main(String[] args) {
-        String s1 = "adc";
-        String s2 = "dcda";
+        String s1 = "hello";
+        String s2 = "ooolleoooleh";
         System.out.println(checkInclusion(s1, s2));
+        System.out.println(checkInclusion2(s1, s2));
     }
 
     public static boolean checkInclusion(String s1, String s2) {
@@ -62,5 +63,33 @@ public class leetcode567 {
             }
         }
         return true;
+    }
+
+    public static boolean checkInclusion2(String s1, String s2) {
+        int[] charCount = new int[26];
+        for (char c : s1.toCharArray()) {
+            charCount[c - 'a']++;
+        }
+        int count = s1.length();
+        int left = 0;
+        for (int i = 0; i < s2.length(); i++) {
+            char t = s2.charAt(i);
+            if (charCount[t - 'a'] > 0) {
+                count--;
+            }
+            charCount[t - 'a']--;
+            while (i - left + 1 == s1.length()) {
+                if (count == 0) {
+                    return true;
+                }
+                char leftChar = s2.charAt(left);
+                charCount[leftChar - 'a']++;
+                if (charCount[leftChar - 'a'] > 0) {
+                    count++;
+                }
+                left++;
+            }
+        }
+        return false;
     }
 }

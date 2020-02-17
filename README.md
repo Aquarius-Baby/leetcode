@@ -2,6 +2,13 @@
 - [001 两数之和](src/code/package0/leetcode001.java)
 - [002 两数相加](src/code/package0/leetcode002.java)
 - [003 无重复字符的最长子串](src/code/package0/leetcode003.java)
+- [004 寻找两个有序数组的中位数](src/code/package0/leetcode004.java)
+- [005 最长回文子串](src/code/package0/leetcode005.java)
+- [006 Z 字形变换](src/code/package0/leetcode006.java)
+- [007 整数反转](src/code/package0/leetcode007.java)
+- [008 字符串转换整数](src/code/package0/leetcode008.java)
+- [009 回文数](src/code/package0/leetcode009.java)
+- [010 正则表达式匹配](src/code/package0/leetcode010.java)
 - [018 三数之和](src/code/package0/leetcode018.java)
 - [022 括号生成](src/code/package0/leetcode022.java)
 - [043 字符串相乘](src/code/package0/leetcode043.java)
@@ -81,6 +88,14 @@
 - [142 环形链表 入环点]( )
 - [ 环形链表 环长度]( )
  
+### 字符串
+- [003 无重复字符的最长子串](src/code/package0/leetcode003.java)
+
+### 滑窗
+- [003 无重复字符的最长子串](src/code/package0/leetcode003.java)
+
+### 双指针
+- [003 无重复字符的最长子串](src/code/package0/leetcode003.java)
 
 ### 树
 - [112 路径总和](src/code/package1/leetcode112.java)
