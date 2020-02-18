@@ -18,6 +18,7 @@
 - [062 不同路径](src/code/package0/leetcode062.java)
 - [069 x 的平方根](src/code/package0/leetcode069.java)
 - [071 简化路径](src/code/package0/leetcode071.java)
+- [076 最小覆盖子串](src/code/package0/leetcode076.java)
 - [093 复原IP地址](src/code/package0/leetcode093.java)
 - [097 字符串交错](src/code/package0/leetcode097.java)
 - [103 二叉树的锯齿形层次遍历](src/code/package1/leetcode103.java)
@@ -35,6 +36,7 @@
 - [148 排序链表](src/code/package1/leetcode148.java)
 - [151 翻转字符串里的单词](src/code/package1/leetcode151.java)
 - [152 乘积最大子序列](src/code/package1/leetcode152.java)
+- [159 至多包含两个不同字符的最长子串](src/code/package1/leetcode159.java)
 - [162 寻找峰值](src/code/package1/leetcode162.java)
 - [179 最大数](src/code/package1/leetcode179.java)
 - [189 旋转数组](src/code/package1/leetcode189.java)
@@ -47,6 +49,7 @@
 - [221 最大正方形](src/code/package2/leetcode221.java)
 - [230 二叉搜索树中第K小的元素](src/code/package2/leetcode230.java)
 - [235 二叉树的最近公共祖先](src/code/package2/leetcode235java)
+- [239 滑动窗口最大值](src/code/package2/leetcode239.java)
 - [242 有效的字母异位词](src/code/package2/leetcode242.java)
 - [287 寻找重复数](src/code/package2/leetcode287.java)
 - [295 数据流的中位数](src/code/package2/leetcode295.java)
@@ -54,6 +57,7 @@
 - [315 计算右侧小于当前元素的个数](src/code/package3/leetcode315.java)
 - [324 摆动排序 II](src/code/package3/leetcode324.java)
 - [334 递增的三元子序列](src/code/package3/leetcode334.java)
+- [340 至多包含k个不同字符的最长子串](src/code/package3/leetcode340.java)
 - [344 反转字符串](src/code/package3/leetcode344.java)
 - [347 前 K 个高频元素](src/code/package3/leetcode347.java)
 - [350 两个数组的交集 II](src/code/package3/leetcode350.java)
@@ -93,6 +97,10 @@
 
 ### 滑窗
 - [003 无重复字符的最长子串](src/code/package0/leetcode003.java)
+- [076 最小覆盖子串](src/code/package0/leetcode076.java)
+- [159 至多包含两个不同字符的最长子串](src/code/package1/leetcode159.java)
+- [340 至多包含k个不同字符的最长子串](src/code/package3/leetcode340.java)
+- [239 滑动窗口最大值](src/code/package2/leetcode239.java)
 
 ### 双指针
 - [003 无重复字符的最长子串](src/code/package0/leetcode003.java)
