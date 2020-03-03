@@ -7,8 +7,14 @@ import util.TreeNode;
  */
 public class leetcode105 {
 
+    public static void main(String[] args) {
+        int[] preorder = {3, 9, 20, 15, 7};
+        int[] inorder = {9, 3, 15, 20, 7};
+        TreeNode root = new leetcode105().buildTree(preorder, inorder);
+        System.out.print(root.val);
+    }
 
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
+    public TreeNode buildTree2(int[] preorder, int[] inorder) {
         return buildTreeHelper(preorder, 0, preorder.length, inorder, 0, inorder.length);
     }
 
@@ -35,4 +41,28 @@ public class leetcode105 {
         return root;
     }
 
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        TreeNode root = help(preorder, 0, preorder.length, inorder, 0, inorder.length);
+        return root;
+    }
+
+    TreeNode help(int[] preorder, int leftStart, int leftEnd, int[] inorder, int rightStart, int rightEnd) {
+        if (leftStart == leftEnd) {
+            return null;
+        }
+        TreeNode root = new TreeNode(preorder[leftStart]);
+        int i = rightStart;
+        for (; i < rightEnd; i++) {
+            if (preorder[leftStart] == inorder[i]) break;
+        }
+        // 0 1 2 [3]
+        int leftNum = i - rightStart;
+        // pre leftStart+1 ---> leftStart + leftNum + 1      leftStart + leftNum + 1 --->leftEnd
+        // in rightStart ---> i   i + 1 ---> rightEnd
+        TreeNode left = help(preorder, leftStart + 1, leftStart + leftNum + 1, inorder, rightStart, i);
+        TreeNode right = help(preorder, leftStart + leftNum + 1, leftEnd, inorder, i + 1, rightEnd);
+        root.left = left;
+        root.right = right;
+        return root;
+    }
 }

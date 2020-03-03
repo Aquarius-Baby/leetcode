@@ -1,6 +1,5 @@
 package code.package0;
 
-import java.util.Arrays;
 
 /**
  * 43 字符串相乘

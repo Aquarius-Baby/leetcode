@@ -14,8 +14,8 @@ import java.util.*;
  */
 public class leetcode093 {
     public static void main(String[] args) {
-        String s = "0279245587303";
-        List<String> res = new leetcode093().restoreIpAddresses(s);
+        String s = "1111";
+        List<String> res = new leetcode093().restoreIpAddresses2(s);
         for (String t : res) {
             System.out.println(t);
         }
@@ -61,7 +61,7 @@ public class leetcode093 {
     public List<String> restoreAddresses(String s, int num, List<String> res, Stack<String> stack) {
         int length = s.length();
         if (num == 3) {
-            if (length<= 0 || length > 3 ||Integer.valueOf(s) > 255) {
+            if (length <= 0 || length > 3 || Integer.valueOf(s) > 255) {
                 return res;
             }
         }
@@ -89,5 +89,44 @@ public class leetcode093 {
             }
         }
         return res;
+    }
+
+
+    public List<String> restoreIpAddresses2(String s) {
+        List<String> list = new ArrayList<>();
+        restoreAddresses(list, new Stack<String>(), s, 1, 0);
+        return list;
+    }
+
+    public void restoreAddresses(List<String> list, Stack<String> stack, String s, int index, int startPlace) {
+        if (index >= 4) {
+            int length = s.length() - startPlace;
+            if (length <= 0 || length > 3) {
+                return;
+            }
+            if (length > 1 && s.charAt(startPlace) == '0') {
+                return;
+            }
+            String num = s.substring(startPlace, s.length());
+            if (Integer.valueOf(num) > 255) {
+                return;
+            }
+            stack.push(num);
+            list.add(String.join(".", stack));
+            stack.pop();
+            return;
+        }
+        for (int length = 1; length < 4 && startPlace + length < s.length(); length++) {
+            String num = s.substring(startPlace, startPlace + length);
+            if (length > 1 && s.charAt(startPlace) == '0') {
+                return;
+            }
+            if (Integer.valueOf(num) <= 255) {
+                stack.push(num);
+                restoreAddresses(list, stack, s, index + 1, startPlace + length);
+                stack.pop();
+            }
+        }
+
     }
 }
