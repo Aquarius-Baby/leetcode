@@ -99,6 +99,8 @@
 - [695 岛屿的最大面积](src/code/leetcode695.java)
 - [887 鸡蛋掉落](src/code/leetcode887.java)
 - [957 N天后的牢房](src/code/leetcode957.java)
+- [1014 最佳观光组合](src/code/leetcode1014.java)
+- [1016 子串能表示从 1 到 N 数字的二进制串](src/code/leetcode1016.java)
 - [1277 统计全为 1 的正方形子矩阵](src/code/package1/leetcode1277.java)
 
 
