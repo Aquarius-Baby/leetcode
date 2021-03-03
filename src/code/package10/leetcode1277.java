@@ -1,4 +1,4 @@
-package code;
+package code.package10;
 
 /**
  * 1277 统计全为 1 的正方形子矩阵

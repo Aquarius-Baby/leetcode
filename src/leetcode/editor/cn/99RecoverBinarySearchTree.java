@@ -36,6 +36,8 @@ package leetcode.editor.cn;
 // 👍 421 👎 0
 
 
+import util.TreeNode;
+
 class RecoverBinarySearchTree {
     public static void main(String[] args) {
         Solution solution = new RecoverBinarySearchTree().new Solution();
@@ -58,6 +60,7 @@ class RecoverBinarySearchTree {
      * }
      * }
      */
+
     class Solution {
         //用两个变量x，y来记录需要交换的节点
         private TreeNode x = null;

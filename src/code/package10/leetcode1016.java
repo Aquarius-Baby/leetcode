@@ -1,4 +1,4 @@
-package code;
+package code.package10;
 
 /**
  * 1016. 子串能表示从 1 到 N 数字的二进制串

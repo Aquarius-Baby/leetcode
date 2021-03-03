@@ -1,4 +1,4 @@
-package code;
+package code.package10;
 
 /**
  * 1139 最大的以 1 为边界的正方形

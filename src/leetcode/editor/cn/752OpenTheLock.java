@@ -136,9 +136,6 @@ class OpenTheLock {
             return new String(numArray);
         }
 
-        public void test() {
-            "".toCharArray();
-        }
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
