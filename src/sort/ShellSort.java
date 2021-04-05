@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class ShellSort {
     public static void main(String[] args) {
         int[] nums = {9, 1, 5, 3, 2, 7, 8};
-        new ShellSort().shellSort(nums);
+        ShellSort.shellSort(nums);
         System.out.println(Arrays.toString(nums));
     }
 
@@ -22,6 +22,14 @@ public class ShellSort {
             for (int k = 0; k < incre; k++) {    //根据增量分为若干子序列
                 ///循环插入排序
                 for (int i = k + incre; i < length; i += incre) {
+                    //      int temp = array[i];
+                    ////                    int j = i - incre;
+                    ////                    while (j >= k && array[j] > temp) {
+                    ////                        array[j + incre] = array[j];
+                    ////                        j = j - incre;
+                    ////                    }
+                    ////                    j = j + incre;
+                    ////                    array[j] = temp;
                     for (int j = i; j > k; j -= incre) {
                         if (array[j] < array[j - incre]) {
                             temp = array[j - incre];
